@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jakub Zieliński">
+    <title>Air Traffic Control App</title>
+
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <script src="./assets/script/script.js" defer></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="section" id="hero">
+            <div class="panel">
+                <div class="option-group">
+                    <select name="airline" id="airline">
+                        <option value="lufthansa">Lufthansa</option>
+                        <option value="wizzair">Wizz Air</option>
+                        <option value="ryanair">Ryanair</option>
+                    </select>
+                    <select name="plane" id="plane">
+                        <option value="a320neo">Airbus A320neo</option>
+                    </select>
+                </div>
+                <input name="number" type="text" id="number" placeholder="flight number" pattern="[A-Z][A-Z]\d\d\d\d">
+                <div class="option-group">
+                    <h2 class="title">take off</h2>
+                    <select name="takeoff" id="takeoff">
+                        <option value="LON London Airport">LON London Airport</option>
+                        <option value="KRK Kraków Airport">KRK Kraków Airport</option>
+                        <option value="WWA Warsaw Airport">WWA Warsaw Airport</option>
+                    </select>
+                    <div class="date-and-time">
+                        <input type="time" id="takeoff-time">
+                        <input type="date" id="takeoff-date" min="2022-08-07">
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h2 class="title">landing</h2>
+                    <select name="landing" id="landing">
+                        <option value="LON London Airport">LON London Airport</option>
+                        <option value="KRK Kraków Airport">KRK Kraków Airport</option>
+                        <option value="WWA Warsaw Airport">WWA Warsaw Airport</option>
+                    </select>
+                    <div class="date-and-time">
+                        <input type="time" id="landing-time">
+                        <input type="date" id="landing-date" min="2022-08-07">
+                    </div>
+                </div>
+
+                <button id="submit" class="submit">Create</button>
+
+            </div>
+            <div class="cover">
+                <h2 class="headline" id="airport-name">Krakow Poland</h2>
+                <img class="cover-image">
+            </div>
+        </div>
+        <div class="section" id="flights">
+            <div class="panel">
+                <table id="flights-table">
+                    <tr>
+                        <th colspan="2"></th>
+                        <th colspan="2" class="locheadline">Departure</th>
+                        <th colspan="2"></th>
+                        <th colspan="2" class="locheadline">Arrival</th>
+                        <th>Flight Details</th>
+                        <th>Duration</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="icon-holder"> <img class="icon" src="./assets/gfx/icons/airlines/ryanair.png"> </td>
+                        <td class="time">11.14 AM</td>
+                        <td class="bold">LON</td>
+                        <td class="location">London (United Kingdom)</td>
+                        <td class="icon-holder"> <img class="icon"
+                                src="https://www.svgrepo.com/show/80273/two-arrows-pointing-right-and-left.svg"> </td>
+                        <td class="time">3.14 AM</td>
+                        <td class="bold">KRK</td>
+                        <td class="location">Krakow (Poland)</td>
+                        <td class="number">Wizz Air W65001</td>
+                        <td class="duration">2h 35m</td>
+                        <td class="date">Aug 31</td>
+                        <td class="status">Flying at 22.000ft</td>
+                        <td class="icon-holder"> </td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div class="cover">
+                <h2 class="headline">Flights</h2>
+                <img class="cover-image">
+            </div>
+        </div>
+    </div>
+
+    <footer>Copyright Jakub Zielinski 2022, All rights reserved</footer>
+
+</body>
+
+</html>

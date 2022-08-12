@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap');
+
+:root {
+    --primary-color: #6F63FF;
+    --primary-hover: #4940b7;
+    --grayish: #818181;
+}
+
+*,
+*::before,
+*::after {
+    font-family: 'Outfit', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || General styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20em;
+    height: 300%;
+    margin: 300px 0;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    margin: 10em 0;
+
+    position: relative;
+}
+
+/* || Each Section General Styles */
+
+.panel {
+    position: relative;
+
+    width: 1200px;
+    min-height: 180px;
+    height: fit-content;
+
+    background: white;
+    box-shadow: 0px 216px 86px rgba(0, 0, 0, 0.02), 0px 122px 73px rgba(0, 0, 0, 0.08), 0px 54px 54px rgba(0, 0, 0, 0.13), 0px 14px 30px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+
+    padding: 2.5em 3.5em;
+    /* display: flex; */
+
+    /* align-items: center; */
+    gap: 1.5em;
+
+    z-index: 20;
+}
+
+.cover {
+    position: absolute;
+    top: calc(0% - 300px);
+    display: block;
+
+    width: 1300px;
+    height: 400px;
+
+    z-index: 10;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 25px;
+}
+
+/* || Cover Images For Each Section */
+
+#hero .cover-image {
+    background: url(../gfx/img/plane.jpg);
+    background-size: cover;
+}
+
+#flights .cover-image {
+    background: url(../gfx/img/landing.png);
+    background-size: cover;
+}
+
+/* || Cover Images For Each Section */
+
+.panel select,
+.panel input {
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+    max-height: 23px;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5em;
+}
+
+.title {
+    color: var(--grayish);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.option-group {
+    width: fit-content;
+    max-width: 230px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.option-group select,
+.date-and-time {
+    width: 100%;
+}
+
+.date-and-time {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#number {
+    max-width: 130px;
+}
+
+.submit {
+    min-width: 150px;
+    min-height: 40px;
+
+    font-size: 16px;
+    border-radius: 25px;
+
+    color: white;
+    border: none;
+    background: var(--primary-color);
+
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.submit:hover {
+    background: var(--primary-hover);
+    filter: drop-shadow(0px 43px 17px rgba(0, 0, 0, 0.01)) drop-shadow(0px 24px 14px rgba(0, 0, 0, 0.05)) drop-shadow(0px 11px 11px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
+}
+
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+#airport-tag {
+    color: white;
+    font-size: 52px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+#flights .panel {
+    display: flex;
+    flex-direction: column;
+
+}
+
+table {
+    text-align: left;
+    font-size: 15px;
+}
+
+td.icon-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+th {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+tr,
+td,
+th {
+    height: 40px;
+    min-width: 25px;
+    /* border: 1px solid black; */
+}
+
+.time {
+    width: 72px;
+}
+
+.time,
+.location {
+    color: var(--grayish);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
+
+.location {
+    min-width: 150px;
+    max-width: 210px;
+}
+
+.status {
+    min-width: 100px;
+}
+
+.locheadline {
+    max-width: 240px;
+    min-width: 210px;
+}
+
+footer {
+    font-size: 16px;
+    text-align: center;
+    padding: 1.5em;
+}
+
+#airport-name {
+    text-transform: capitalize;
+}
+
+#airport-tag {
+    text-transform: uppercase;
+}
